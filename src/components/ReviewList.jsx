@@ -56,8 +56,8 @@ function ReviewList() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await axios.get('https://qr-feedback-backend-production.up.railway.app');
-        setReviews(res.data);
+      const res = await axios.get('https://qr-feedback-backend-production.up.railway.app/api/reviews');
+
       } catch (err) {
         console.error('Error fetching reviews:', err);
       }

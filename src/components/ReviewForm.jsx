@@ -19,7 +19,7 @@ function ReviewForm({ onReviewSubmitted }) {
     e.preventDefault();
 
     try {
-      await axios.post('https://qr-feedback-backend-production.up.railway.app', {
+      await axios.post('https://qr-feedback-backend-production.up.railway.app/api/reviews', {
         name: formData.name,
         message: formData.comment,  // backend expects `message`, not `comment`
         rating: formData.rating     // optional: if you added this to backend
